@@ -72,9 +72,9 @@ Remove an entire stack configured in `serverless.yml` via CloudFormation.
 
 ## Task 2 — Deployment Links
 
-| Resource       | URL                                                                                                       |
-| -------------- | --------------------------------------------------------------------------------------------------------- |
-| CloudFront URL | https://d1w0cu0me25lu9.cloudfront.net                                                                     |
-| S3 Website URL | http://deploywebappstack-deploymentfrontendbucket67ceb713-pxwhjkzxjecj.s3-website-us-east-1.amazonaws.com |
+| Resource       | URL                                                             |
+| -------------- | --------------------------------------------------------------- |
+| CloudFront URL | https://d1w0cu0me25lu9.cloudfront.net                           |
+| S3 Bucket Name | deploywebappstack-deploymentfrontendbucket67ceb713-pxwhjkzxjecj |
 
-> Note: The S3 bucket has all public access blocked. Direct S3 website access returns **403 Access Denied** by design. The app is served exclusively through the CloudFront distribution.
+> Note: The S3 bucket has all public access blocked and static website hosting is **not** enabled. The bucket is accessed exclusively by CloudFront via Origin Access Control (OAC). Direct S3 access is not possible by design — the app is served only through the CloudFront distribution.
