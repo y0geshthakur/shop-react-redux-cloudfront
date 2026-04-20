@@ -72,9 +72,18 @@ Remove an entire stack configured in `serverless.yml` via CloudFormation.
 
 ## Task 2 — Deployment Links
 
-| Resource        | URL                                                                                                              |
-| --------------- | ---------------------------------------------------------------------------------------------------------------- |
-| CloudFront URL  | https://d1w0cu0me25lu9.cloudfront.net                                                                            |
-| S3 Direct URL   | https://deploywebappstack-deploymentfrontendbucket67ceb713-pxwhjkzxjecj.s3.amazonaws.com/index.html              |
+| Resource       | URL                                                                                                 |
+| -------------- | --------------------------------------------------------------------------------------------------- |
+| CloudFront URL | https://d1w0cu0me25lu9.cloudfront.net                                                               |
+| S3 Direct URL  | https://deploywebappstack-deploymentfrontendbucket67ceb713-pxwhjkzxjecj.s3.amazonaws.com/index.html |
 
 > Note: The S3 bucket has all public access blocked and is accessed exclusively by CloudFront via Origin Access Control (OAC). Opening the S3 direct URL returns **Access Denied** — this is intentional. The app is only accessible through the CloudFront distribution.
+
+## Task 3 — Product Service Integration Links
+
+| Resource                  | URL                                                                                                      |
+| ------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Frontend (CloudFront)     | https://d1w0cu0me25lu9.cloudfront.net                                                                    |
+| Product Service API Base  | https://f6012m8ype.execute-api.us-east-1.amazonaws.com/dev                                               |
+| GET /products             | https://f6012m8ype.execute-api.us-east-1.amazonaws.com/dev/products                                      |
+| GET /products/{productId} | https://f6012m8ype.execute-api.us-east-1.amazonaws.com/dev/products/7567ec4b-b10c-48c5-9345-fc73c48a80aa |
